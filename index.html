@@ -1757,7 +1757,7 @@
         ];
         /* SAMPLE DATA: names, prices and stock are demonstrations only until the owner confirms real inventory.
            status: "ask" (default, ask on WhatsApp) | "in" | "out"      sale: optional sale price      images: optional array of photo URLs */
-        const DEFAULT_PRODUCTS = [
+      /*   const DEFAULT_PRODUCTS = [
             { id: "p01", name: "Plush Teddy Bear", cat: "soft-toys", price: 499, sale: null, emoji: "🧸", status: "ask", desc: "A soft, cuddly teddy bear that makes a lovely gift for birthdays and special days." },
             { id: "p02", name: "Gift Hamper Basket", cat: "gift-items", price: 1299, sale: 1099, emoji: "🧺", status: "ask", desc: "A curated gift basket arranged for celebrations. Contents can be discussed with the shop." },
             { id: "p03", name: "Birthday Gift Set", cat: "birthday", price: 699, sale: null, emoji: "🎁", status: "ask", desc: "A ready-to-gift birthday set, wrapped and ready to surprise someone special." },
@@ -1777,8 +1777,8 @@
         ];
         /* Products live here at runtime. Admin edits are saved in THIS browser only (localStorage).
            To publish admin changes for everyone: Admin Panel > "Export products" and paste the result over DEFAULT_PRODUCTS above. */
-        let PRODUCTS;
-        try { const s = JSON.parse(localStorage.getItem("bgv_products") || "null"); PRODUCTS = Array.isArray(s) ? s : DEFAULT_PRODUCTS.slice() } catch (e) { PRODUCTS = DEFAULT_PRODUCTS.slice() }
+       /*  let PRODUCTS;
+        try { const s = JSON.parse(localStorage.getItem("bgv_products") || "null"); PRODUCTS = Array.isArray(s) ? s : DEFAULT_PRODUCTS.slice() } catch (e) { PRODUCTS = DEFAULT_PRODUCTS.slice() }  */
         /* Admin login check: only a salted SHA-256 hash is stored here, not the password itself.
            NOTE: this is front-end only protection. It stops casual visitors but is NOT real security. */
         const ADMIN_HASH = "311f89cfe2d1a162bff77497a40a1e9f6914708c3f06cb148d97f8870a09728d";
